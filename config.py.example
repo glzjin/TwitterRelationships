@@ -1,0 +1,7 @@
+class Config:
+    cookies = 'fill your twitter cookies at there'
+
+    postgresql_address = 'localhost'
+    postgresql_database = 'twitter'
+    postgresql_user = 'twitter'
+    postgresql_password = '123456'
