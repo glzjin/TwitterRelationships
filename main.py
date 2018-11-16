@@ -38,9 +38,12 @@ def main():
 
         print("Get Friend of user:%s" % user['screen_name'])
 
-        friend_users = api.pull_friends(user['screen_name'])
-        for friend_users_user in friend_users:
-            database.insert(user['screen_name'], user['name'], friend_users_user['screen_name'], friend_users_user['name'])
+        try:
+            friend_users = api.pull_friends(user['screen_name'])
+            for friend_users_user in friend_users:
+                database.insert(user['screen_name'], user['name'], friend_users_user['screen_name'], friend_users_user['name'])
+        except Exception:
+            print("Some error!")
 
 
 if __name__ == "__main__":

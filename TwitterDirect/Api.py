@@ -61,7 +61,6 @@ class Api:
                 flags=re.M).findall(users)
             for user in users:
                 data.append({'screen_name': user[0], 'name': user[1]})
-                print({'screen_name': user[0], 'name': user[1]})
             if not return_data['has_more_items']:
                 break
             else:
