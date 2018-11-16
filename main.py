@@ -19,6 +19,9 @@ def main():
 
     is_skip = True
 
+    if target_user_name == '':
+        is_skip = False
+
     # name: nickname, screen_name: username in general way....But it may misunderstand in database part
     for user in users:
 
